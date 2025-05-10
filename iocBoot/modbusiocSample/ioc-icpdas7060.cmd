@@ -1,11 +1,10 @@
-#!../../bin/linux-x86_64/icpdas
+#!../../bin/linux-x86_64/modbustemplated
 
 < envPaths
 
 ## Register all support components
-dbLoadDatabase "../../dbd/icpdas.dbd"
-icpdas_registerRecordDeviceDriver(pdbbase)
-
+dbLoadDatabase "../../dbd/modbustemplated.dbd"
+modbustemplated_registerRecordDeviceDriver(pdbbase)
 
 drvAsynIPPortConfigure("ICPDAS_IP", "10.16.4.33:502", 0, 0, 0)
 modbusInterposeConfig("ICPDAS_IP",0,0,0)
